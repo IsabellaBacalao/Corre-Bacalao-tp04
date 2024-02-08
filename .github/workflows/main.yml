@@ -1,26 +1,29 @@
 name: Build and Deploy 
 on: 
   push:   
-    branch: 
+    branches: 
     - main
 
-permission: 
+permissions: 
   contents: read
   pages: write
   id-token: write
 
 
 jobs: 
-  runs-on: alpine-latest
   build:
+    runs-on: alpine-latest
     steps:
     - name: checkout main 
       uses: actions/checkout@v4
+    
     - name: setup node
       uses: actions/setup-node@v4
+    - name: build
       run: |
         npm i
         npm run build
+
   deploy:
     environment:
       name: github-pages

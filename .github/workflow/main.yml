@@ -8,9 +8,10 @@ permission:
   contents: read
   pages: write
   id-token: write
+
+
 jobs: 
   runs-on: alpine-latest
-
   build:
     steps:
     - name: checkout main 

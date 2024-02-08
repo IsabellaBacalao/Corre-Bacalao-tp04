@@ -1,3 +1,4 @@
+// @ts-ignore  
 import ChromeDinoGame from 'react-chrome-dino';
 
 const App = () => (
